@@ -1,11 +1,22 @@
 public class DataBase
 {
 boolean[] HeadOrTail;
+int _succession=0,numOfSuccession=0;
+boolean _prevBoolean;
 public void DataBase(int Flips, int Succession)
 {
 HeadOrTail=new boolean[Flips];
   for(int i=0;i<HeadOrTail.length;i++)
-      HeadOrTail[i]=.Flip();
-
+      HeadOrTail[i]=Flip.Flip();
+   _prevBoolean=HeadOrTail[0];
+   for(int i=1;i<HeadOrTail.length;i++)
+      {
+      if(HeadOrTail[i]==_prevBoolean)
+         _succession++;
+      if(_succession==Succession)
+         numOfSuccession++;
+      }
+      System.out.println("your succession happend "+numOfSuccession+" times");
+      System.out.println("the probabilty of this succession is "+(float)numOfSuccession/Flips);
 }
 }
