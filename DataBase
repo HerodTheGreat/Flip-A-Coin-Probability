@@ -3,7 +3,7 @@ public class DataBase
 boolean[] HeadOrTail;
 int _succession=0,numOfSuccession=0;
 boolean _prevBoolean;
-public void DataBase(int Flips, int Succession)
+public DataBase(int Flips, int Succession)
 {
 HeadOrTail=new boolean[Flips];
   for(int i=0;i<HeadOrTail.length;i++)
