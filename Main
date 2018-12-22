@@ -3,11 +3,17 @@ public class Main
 {
 public static void Main(String[]args)
 {
+int stop=1;
 Scanner sc = new Scanner(System.in);
+while(stop!=0)
+{
 System.out.println("how many flips you wish to make?");
 int Flips = sc.nextInt();
 System.out.println("what succession you wish to find?");
 int Succession = sc.nextInt();
 DataBase DB= new DataBase(Flips,Succession);
+System.out.println("if you wish to stop write 0");
+stop = sc.nextInt();
+}
 }
 }
